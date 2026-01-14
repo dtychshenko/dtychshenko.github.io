@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">System Requirements | Peppermint</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://peppermint.peppermint-app.workers.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://peppermint.peppermint-app.workers.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://peppermint.peppermint-app.workers.dev/docs/design/requirements"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="System Requirements | Peppermint"><meta data-rh="true" name="description" content="Functional Requirements"><meta data-rh="true" property="og:description" content="Functional Requirements"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://peppermint.peppermint-app.workers.dev/docs/design/requirements"><link data-rh="true" rel="alternate" href="https://peppermint.peppermint-app.workers.dev/docs/design/requirements" hreflang="en"><link data-rh="true" rel="alternate" href="https://peppermint.peppermint-app.workers.dev/docs/design/requirements" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Design","item":"https://peppermint.peppermint-app.workers.dev/docs/category/design"},{"@type":"ListItem","position":2,"name":"System Requirements","item":"https://peppermint.peppermint-app.workers.dev/docs/design/requirements"}]}</script><link rel="stylesheet" href="/assets/css/styles.2fbd704d.css">
-<script src="/assets/js/runtime~main.02485603.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.463abaf7.js" defer="defer"></script>
 <script src="/assets/js/main.297633f0.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -56,13 +56,17 @@
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="usability--experience">Usability &amp; Experience<a href="#usability--experience" class="hash-link" aria-label="Direct link to Usability &amp; Experience" title="Direct link to Usability &amp; Experience" translate="no">​</a></h3>
 <ul>
-<li class=""><strong>&quot;Wowed&quot; Aesthetics</strong>: Design must use modern best practices (Glassmorphism, Micro-animations, Dark Mode).</li>
-<li class=""><strong>Graceful Degradation</strong>: System must handle simulated &quot;slow network&quot; states (loading skeletons) without blocking the UI.</li>
+<li class="">Design must use modern best practices.</li>
+<li class="">Micro-animations, dark mode and accessibility considerations.</li>
+<li class="">System must handle simulated &quot;slow network&quot; states without blocking the UI, displaying in-progress indicators as needed and allowing continued interaction.</li>
+<li class="">Globalization support.</li>
+<li class="">The UI is intentionally not mobile-first. Mobile responsiveness is strived for, but the mobile experience is better served by a dedicated native app.</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="privacy--security">Privacy &amp; Security<a href="#privacy--security" class="hash-link" aria-label="Direct link to Privacy &amp; Security" title="Direct link to Privacy &amp; Security" translate="no">​</a></h3>
 <ul>
-<li class=""><strong>Local-First Processing</strong>: For the POC, data processing happens in the browser to ensure speed and privacy.</li>
-<li class="">No sensitive financial data is permanently stored on a server for this demo.</li>
+<li class="">Data is encrypyted at rest and in transit.</li>
+<li class="">No sensitive data is logged.</li>
+<li class="">Mock backend does not persist data beyond session.</li>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="reliability">Reliability<a href="#reliability" class="hash-link" aria-label="Direct link to Reliability" title="Direct link to Reliability" translate="no">​</a></h3>
 <ul>
