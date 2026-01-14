@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Implementation Plan | Peppermint</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://peppermint.peppermint-app.workers.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://peppermint.peppermint-app.workers.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://peppermint.peppermint-app.workers.dev/docs/design/plan"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Implementation Plan | Peppermint"><meta data-rh="true" name="description" content="Stage 1: MVP"><meta data-rh="true" property="og:description" content="Stage 1: MVP"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://peppermint.peppermint-app.workers.dev/docs/design/plan"><link data-rh="true" rel="alternate" href="https://peppermint.peppermint-app.workers.dev/docs/design/plan" hreflang="en"><link data-rh="true" rel="alternate" href="https://peppermint.peppermint-app.workers.dev/docs/design/plan" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Design","item":"https://peppermint.peppermint-app.workers.dev/docs/category/design"},{"@type":"ListItem","position":2,"name":"Implementation Plan","item":"https://peppermint.peppermint-app.workers.dev/docs/design/plan"}]}</script><link rel="stylesheet" href="/assets/css/styles.2fbd704d.css">
-<script src="/assets/js/runtime~main.4d6830a8.js" defer="defer"></script>
-<script src="/assets/js/main.17dd0c15.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3ec72716.js" defer="defer"></script>
+<script src="/assets/js/main.884128d8.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -57,11 +57,10 @@
 </ol>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="stage-3-ai-native-categorization">Stage 3: AI-Native Categorization<a href="#stage-3-ai-native-categorization" class="hash-link" aria-label="Direct link to Stage 3: AI-Native Categorization" title="Direct link to Stage 3: AI-Native Categorization" translate="no">​</a></h2>
 <p>A feature flag is added to enable AI-native categorization. When enabled, the categorization service is enhanced to use a pre-trained ML model to categorize transactions. The model is invoked asynchronously via a queue after the static rules categorization is complete. The model returns the category along with a confidence score. If the confidence score is above a threshold, the transaction is marked reviewed automatically.</p>
-<p>If categorization via ML model fails, the transaction is categorized using static rules.</p>
+<p>If categorization via ML model fails, the transaction is categorized using static rules.
+If the static rules have no match, the transaction is marked as &quot;Uncategorized&quot; and requires manual review by the user.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="stage-4-reporting">Stage 4: Reporting<a href="#stage-4-reporting" class="hash-link" aria-label="Direct link to Stage 4: Reporting" title="Direct link to Stage 4: Reporting" translate="no">​</a></h2>
-<ul>
-<li class="">A widget is added that shows monthly spending by category. Users can select a month and view a breakdown of spending by category.</li>
-</ul>
+<p>A widget is added that shows monthly spending by category. Users can select a month and view a breakdown of spending by category.</p>
 <ol>
 <li class="">A dropdown is added that allows users to select a month/year.</li>
 <li class="">When a month is selected, the front end queries the transaction service for transactions in that month.</li>
