@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.9.2">
 <title data-rh="true">Implementation Plan | Peppermint</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://peppermint.peppermint-app.workers.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://peppermint.peppermint-app.workers.dev/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://peppermint.peppermint-app.workers.dev/docs/design/plan"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Implementation Plan | Peppermint"><meta data-rh="true" name="description" content="Stage 1: MVP"><meta data-rh="true" property="og:description" content="Stage 1: MVP"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://peppermint.peppermint-app.workers.dev/docs/design/plan"><link data-rh="true" rel="alternate" href="https://peppermint.peppermint-app.workers.dev/docs/design/plan" hreflang="en"><link data-rh="true" rel="alternate" href="https://peppermint.peppermint-app.workers.dev/docs/design/plan" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Design","item":"https://peppermint.peppermint-app.workers.dev/docs/category/design"},{"@type":"ListItem","position":2,"name":"Implementation Plan","item":"https://peppermint.peppermint-app.workers.dev/docs/design/plan"}]}</script><link rel="stylesheet" href="/assets/css/styles.2fbd704d.css">
-<script src="/assets/js/runtime~main.e2fda786.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.3c0eab30.js" defer="defer"></script>
 <script src="/assets/js/main.f0202200.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -98,24 +98,21 @@ If the static rules have no match, the transaction is marked as &quot;Uncategori
 <li class="">Realtime updates for transaction processing feedback loop</li>
 <li class="">Queues for background processing of large number of transactions and categorization</li>
 <li class="">Cron triggers for periodic download of transactions from banks</li>
+<li class="">Workers AI for ML model inference</li>
 </ul>
 </li>
 <li class="">Cons: Vendor lock-in</li>
 </ul>
 </li>
-<li class="">Use Chakra UI for quick prototyping of the front end<!-- -->
-<ul>
-<li class="">Pros: Ready to use components, good documentation, accessibility support</li>
-<li class="">Cons: Customization can be limited but enough for the POC purposes, larger bundle size</li>
-</ul>
-</li>
+<li class="">Use Mantine UI for quick prototyping of the front end</li>
 </ol>
 <h1>Intuit-specific Choices</h1>
 <ul>
 <li class="">Estimate traffic based on public Mint data</li>
 <li class="">Create a new app, app plugin and plugin in Appfabric<!-- -->
 <ul>
-<li class="">Using Dynex stack and the Player for front end</li>
+<li class="">Use Dynex stack and the Player for front end</li>
+<li class="">Use CGDS for Player plugins</li>
 </ul>
 </li>
 <li class="">Data import using Data-X</li>
